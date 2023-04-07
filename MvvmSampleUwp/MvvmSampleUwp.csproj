@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E667FBF4-30F2-49AC-8576-7A2B867F8F1A}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvvmSampleUwp</RootNamespace>
+    <AssemblyName>MvvmSampleUwp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22000.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ValidationTextBox.cs">
+      <DependentUpon>ValidationTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentationBlock.cs">
+      <DependentUpon>DocumentationBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InteractiveSample.cs">
+      <DependentUpon>InteractiveSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\TaskResultConverter.cs" />
+    <Compile Include="Helpers\TitleBarHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Services\FileService.cs" />
+    <Compile Include="Services\SettingsService.cs" />
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AsyncRelayCommandPage.xaml.cs">
+      <DependentUpon>AsyncRelayCommandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BuildingTheUIPage.xaml.cs">
+      <DependentUpon>BuildingTheUIPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\INotifyPropertyChangedAttributePage.xaml.cs">
+      <DependentUpon>INotifyPropertyChangedAttributePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RelayCommandAttributePage.xaml.cs">
+      <DependentUpon>RelayCommandAttributePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ObservableValidatorPage.xaml.cs">
+      <DependentUpon>ObservableValidatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ObservablePropertyAttributePage.xaml.cs">
+      <DependentUpon>ObservablePropertyAttributePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SourceGeneratorsPage.xaml.cs">
+      <DependentUpon>SourceGeneratorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RedditServicePage.xaml.cs">
+      <DependentUpon>RedditServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CollectionsPage.xaml.cs">
+      <DependentUpon>CollectionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsServicePage.xaml.cs">
+      <DependentUpon>SettingsServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingUpTheViewModelsPage.xaml.cs">
+      <DependentUpon>SettingUpTheViewModelsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PuttingThingsTogetherPage.xaml.cs">
+      <DependentUpon>PuttingThingsTogetherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessengerRequestPage.xaml.cs">
+      <DependentUpon>MessengerRequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessengerSendPage.xaml.cs">
+      <DependentUpon>MessengerSendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessengerPage.xaml.cs">
+      <DependentUpon>MessengerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IocPage.xaml.cs">
+      <DependentUpon>IocPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IntroductionPage.xaml.cs">
+      <DependentUpon>IntroductionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RedditBrowserPage.xaml.cs">
+      <DependentUpon>RedditBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RelayCommandPage.xaml.cs">
+      <DependentUpon>RelayCommandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ObservableObjectPage.xaml.cs">
+      <DependentUpon>ObservableObjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Widgets\ContactsListWidget.xaml.cs">
+      <DependentUpon>ContactsListWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Widgets\PostWidget.xaml.cs">
+      <DependentUpon>PostWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Widgets\SubredditWidget.xaml.cs">
+      <DependentUpon>SubredditWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Widgets\ValidationFormWidget.xaml.cs">
+      <DependentUpon>ValidationFormWidget.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Icon\AppIcon.scale-100.png" />
+    <Content Include="Assets\Icon\AppIcon.scale-125.png" />
+    <Content Include="Assets\Icon\AppIcon.scale-150.png" />
+    <Content Include="Assets\Icon\AppIcon.scale-200.png" />
+    <Content Include="Assets\Icon\AppIcon.scale-400.png" />
+    <Content Include="Assets\Icon\AppList.scale-100.png" />
+    <Content Include="Assets\Icon\AppList.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\AppList.scale-125.png" />
+    <Content Include="Assets\Icon\AppList.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\AppList.scale-150.png" />
+    <Content Include="Assets\Icon\AppList.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\AppList.scale-200.png" />
+    <Content Include="Assets\Icon\AppList.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\AppList.scale-400.png" />
+    <Content Include="Assets\Icon\AppList.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-16.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-16_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-20.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-20_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-20_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-24.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-24_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-256.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-256_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-30.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-30_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-30_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-32.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-32_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-36.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-36_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-36_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-40.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-40_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-40_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-48.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-48_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-56.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-56_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-56_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-60.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-60_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-60_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-64.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-64_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-64_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-72.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-72_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-72_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-80.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-80_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-80_altform-unplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-96.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-96_altform-lightunplated.png" />
+    <Content Include="Assets\Icon\AppList.targetsize-96_altform-unplated.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-100.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-125.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-150.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-200.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-400.png" />
+    <Content Include="Assets\Icon\LargeTile.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\MedTile.scale-100.png" />
+    <Content Include="Assets\Icon\MedTile.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\MedTile.scale-125.png" />
+    <Content Include="Assets\Icon\MedTile.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\MedTile.scale-150.png" />
+    <Content Include="Assets\Icon\MedTile.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\MedTile.scale-200.png" />
+    <Content Include="Assets\Icon\MedTile.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\MedTile.scale-400.png" />
+    <Content Include="Assets\Icon\MedTile.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-100.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-125.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-150.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-200.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-400.png" />
+    <Content Include="Assets\Icon\SmallTile.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-100_altform-colorful_theme-dark.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-125_altform-colorful_theme-dark.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-150_altform-colorful_theme-dark.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-200_altform-colorful_theme-dark.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-400_altform-colorful_theme-dark.png" />
+    <Content Include="Assets\Icon\SplashScreen.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\StoreDisplay-150.png" />
+    <Content Include="Assets\Icon\StoreDisplay-300.png" />
+    <Content Include="Assets\Icon\StoreDisplay-71.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Icon\StoreLogo.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\WideTile.scale-100.png" />
+    <Content Include="Assets\Icon\WideTile.scale-100_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\WideTile.scale-125.png" />
+    <Content Include="Assets\Icon\WideTile.scale-125_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\WideTile.scale-150.png" />
+    <Content Include="Assets\Icon\WideTile.scale-150_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\WideTile.scale-200.png" />
+    <Content Include="Assets\Icon\WideTile.scale-200_altform-colorful_theme-light.png" />
+    <Content Include="Assets\Icon\WideTile.scale-400.png" />
+    <Content Include="Assets\Icon\WideTile.scale-400_altform-colorful_theme-light.png" />
+    <Content Include="msdocs-communitytoolkit\docs\images\get-started\manage-nuget-packages.png" />
+    <Content Include="msdocs-communitytoolkit\docs\images\mediaelement\intro.png" />
+    <Content Include="msdocs-communitytoolkit\docs\images\source-generator-visualization.png" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\alerts\snackbar-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\alerts\snackbar-ios.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\alerts\toast-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\alerts\toast-ios.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\animation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\character-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\email-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\masked-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\masked-behavior-unmasked-character.png" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\multi-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\required-string-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\text-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\uri-validation-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\behaviors\user-stopped-typing-behavior-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\essentials\file-saver-mac.png" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\get-started\manage-nuget.png" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\layouts\DockLayout.svg" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\layouts\statecontainer.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\views\drawingview-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\views\drawingview-multiline-android.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\views\Expander-ListView.gif" />
+    <Content Include="msdocs-communitytoolkit\docs\maui\images\views\Expander.gif" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Animations">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.Markdown">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ValidationTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DocumentationBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\InteractiveSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AsyncRelayCommandPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BuildingTheUIPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\INotifyPropertyChangedAttributePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RelayCommandAttributePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ObservableValidatorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ObservablePropertyAttributePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SourceGeneratorsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RedditServicePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CollectionsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsServicePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingUpTheViewModelsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PuttingThingsTogetherPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessengerRequestPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessengerSendPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessengerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IocPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IntroductionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RedditBrowserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RelayCommandPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ObservableObjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Widgets\ContactsListWidget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Widgets\PostWidget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Widgets\SubredditWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Widgets\ValidationFormWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\AsyncRelayCommand.md">
+      <Link>Assets\docs\AsyncRelayCommand.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\index.md">
+      <Link>Assets\docs\Introduction.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\Ioc.md">
+      <Link>Assets\docs\Ioc.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\Messenger.md">
+      <Link>Assets\docs\Messenger.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\ObservableObject.md">
+      <Link>Assets\docs\ObservableObject.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\ObservableValidator.md">
+      <Link>Assets\docs\ObservableValidator.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\ObservableRecipient.md">
+      <Link>Assets\docs\ObservableRecipient.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\PuttingThingsTogether.md">
+      <Link>Assets\docs\PuttingThingsTogether.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\RelayCommand.md">
+      <Link>Assets\docs\RelayCommand.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\ObservableGroupedCollections.md">
+      <Link>Assets\docs\ObservableGroupedCollections.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\generators\Overview.md">
+      <Link>Assets\docs\generators\Overview.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\generators\ObservableProperty.md">
+      <Link>Assets\docs\generators\ObservableProperty.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\generators\RelayCommand.md">
+      <Link>Assets\docs\generators\RelayCommand.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\mvvm\generators\INotifyPropertyChanged.md">
+      <Link>Assets\docs\generators\INotifyPropertyChanged.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdocs-communitytoolkit\docs\images\source-generator-visualization.png">
+      <Link>Assets\docs\images\source-generator-visualization.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvvmSample.Core\MvvmSample.Core.csproj">
+      <Project>{28e524f7-61b3-455d-8cbd-615bc4fde814}</Project>
+      <Name>MvvmSample.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msdocs-communitytoolkit\docs\breadcrumb\toc.yml" />
+    <None Include="msdocs-communitytoolkit\docs\diagnostics\Guard.md" />
+    <None Include="msdocs-communitytoolkit\docs\diagnostics\Introduction.md" />
+    <None Include="msdocs-communitytoolkit\docs\diagnostics\ThrowHelper.md" />
+    <None Include="msdocs-communitytoolkit\docs\docfx.json" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\Introduction.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\Memory2D.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\MemoryOwner.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\ParallelHelper.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\Ref.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\Span2D.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\SpanOwner.md" />
+    <None Include="msdocs-communitytoolkit\docs\high-performance\StringPool.md" />
+    <None Include="msdocs-communitytoolkit\docs\index.yml" />
+    <None Include="msdocs-communitytoolkit\docs\introduction.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\.template.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\alerts\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\alerts\snackbar.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\alerts\toast.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\animations\fade-animation.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\animations\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\animation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\characters-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\email-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\event-to-command-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\icon-tint-color-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\masked-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\maximum-length-reached-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\multi-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\numeric-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\progressbar-animation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\required-string-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\set-focus-when-entry-completed-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\statusbar-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\text-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\uri-validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\behaviors\user-stopped-typing-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\bool-to-object-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\byte-array-to-image-source-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-black-or-white-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-byte-alpha-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-byte-blue-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-byte-green-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-byte-red-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-cmyk-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-cmyka-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-color-for-text-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-degree-hue-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-gray-scale-color-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-hex-rgb-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-hex-rgba-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-hsl-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-hsla-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-inverse-color-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-percent-black-key-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-percent-cyan-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-percent-magenta-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-percent-yellow-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-rgb-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\color-to-rgba-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\compare-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\datetimeoffsetconverter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\double-to-int-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\enum-to-bool-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\enum-to-int-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\image-resource-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\index-to-array-item-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\int-to-bool-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\inverted-bool-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-equal-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-in-range-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-list-not-null-or-empty-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-list-null-or-empty-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-not-equal-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-not-null-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-null-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-string-not-null-or-empty-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-string-not-null-or-whitespace-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-string-null-or-empty-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\is-string-null-or-whitespace-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\item-tapped-eventargs-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\list-to-string-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\math-expression-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\multi-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\multi-math-expression-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\selected-item-eventargs-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\state-to-bool-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\string-to-list-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\text-case-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\converters\variable-multi-value-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\essentials\file-saver.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\essentials\folder-picker.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\essentials\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\extensions\color-animation-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\extensions\color-conversion-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\extensions\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\extensions\servicecollection-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\get-started.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\imagesources\GravatarImageSource.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\imagesources\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\includes\communitytoolkit-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\includes\math-expression-operations.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\includes\validation-behavior.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\includes\xaml-usage.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\layouts\DockLayout.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\layouts\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\layouts\StateContainer.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\layouts\UniformItemsLayout.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\converters\func-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\converters\func-multi-converter.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\absolute-layout-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\automation-properties.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\bindable-layout-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\bindable-object-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\dynamic-resource-handler-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\element-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\flex-layout-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\grid-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\image-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\itemsview-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\label-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\object-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\placeholder-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\semantic-properties.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\style.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\text-alignment-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\view-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\extensions\visual-element-extensions.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\markup.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\markup\theming.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\options.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\TOC.yml" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\AvatarView.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\DrawingView.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\Expander.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\MediaElement.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\popup.md" />
+    <None Include="msdocs-communitytoolkit\docs\maui\views\semantic-order-view.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\AsyncRelayCommand.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0001.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0002.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0003.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0004.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0005.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0006.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0007.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0008.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0009.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0010.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0011.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0012.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0013.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0014.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0015.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0016.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0017.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0018.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0019.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0020.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0021.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0022.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0023.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0024.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0025.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0026.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0027.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0028.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0029.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0030.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0031.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0032.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0033.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0034.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0035.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\MVVMTK0036.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\errors\TOC.yml" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\INotifyPropertyChanged.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\ObservableProperty.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\Overview.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\generators\RelayCommand.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\index.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\Ioc.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\Messenger.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\MigratingFromMvvmBasic.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\MigratingFromMvvmLight.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\ObservableGroupedCollections.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\ObservableObject.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\ObservableRecipient.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\ObservableValidator.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\PuttingThingsTogether.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\RelayCommand.md" />
+    <None Include="msdocs-communitytoolkit\docs\mvvm\TOC.yml" />
+    <None Include="msdocs-communitytoolkit\docs\TOC.yml" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,82 @@
+### YamlMime:Landing
+
+title: Community Toolkits Documentation
+summary: The home for .NET based Community Toolkits which are partnering the community with engineers, Microsoft MVPs, and the teams working on those technologies. The Community Toolkits offer a collection of reusable implementations that aim to simplify common development tasks for a variety of .NET frameworks.
+
+metadata:
+  title: Community Toolkits documentation
+  description: The home for .NET based Community Toolkits which are partnering the community with engineers, Microsoft MVPs, and the teams working on those technologies. The Community Toolkits offer a collection of reusable implementations that aim to simplify common development tasks for a variety of .NET frameworks.
+  ms.topic: landing-page
+  ms.date: 02/15/2022
+
+landingContent:
+  - title: .NET Community Toolkit
+    linkLists:  
+      - linkListType: overview
+        links:
+          - text: What is the .NET Community Toolkit?
+            url: introduction.md
+      - linkListType: reference
+        links:
+          - text: Introduction to the MVVM Toolkit
+            url: mvvm/index.md
+          - text: Introduction to the Diagnostics Package
+            url: diagnostics/Introduction.md
+          - text: Introduction to the High Performance Package
+            url: high-performance/Introduction.md
+      - linkListType: get-started
+        links:
+          - text: Installation
+            url: /windows/communitytoolkit/getting-started
+  - title: Windows Community Toolkit
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is the Windows Community Toolkit?
+            url: /windows/communitytoolkit/
+      - linkListType: quickstart
+        links:
+          - text: Windows Community Toolkit Sample App
+            url: https://aka.ms/windowstoolkitapp
+      - linkListType: reference
+        links:
+          - text: Graph Helpers and Controls
+            url: /windows/communitytoolkit/graph/overview
+      - linkListType: get-started
+        links:
+          - text: Installation
+            url: /windows/communitytoolkit/getting-started
+          - text: Using with WinUI 3/Windows App SDK
+            url: https://aka.ms/wct-winui3
+  - title: .NET Multi-platform App UI (.NET MAUI) Community Toolkit
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is the .NET MAUI Community Toolkit?
+            url: maui/index.md
+      - linkListType: get-started
+        links:
+          - text: Installation
+            url: maui/get-started.md
+      - linkListType: concept
+        links:
+          - text: Alerts
+            url: maui/alerts/index.md
+          - text: Animations
+            url: maui/animations/index.md
+          - text: Behaviors
+            url: maui/behaviors/index.md
+          - text: Converters
+            url: maui/converters/index.md
+          - text: Essentials
+            url: maui/essentials/index.md
+          - text: Extensions
+            url: maui/extensions/index.md
+          - text: Image Sources
+            url: maui/imagesources/index.md
+          - text: Layouts
+            url: maui/layouts/index.md
+          - text: Views
+            url: maui/views/index.md
+          - text: C# Markup
+            url: maui/markup/markup.md
